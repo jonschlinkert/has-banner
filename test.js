@@ -28,6 +28,14 @@ describe('hasBanner', function () {
   });
 
   it('should return false if the string does not have a banner comment:', function () {
+    hasBanner('/*!jshint').should.be.false;
+    hasBanner('/*! jshint').should.be.false;
+    hasBanner('/** jshint').should.be.false;
+    hasBanner('/*jshint').should.be.false;
+    hasBanner('/*global').should.be.false;
+    hasBanner('/* global').should.be.false;
+    hasBanner('/! global').should.be.false;
+    hasBanner('/*!global').should.be.false;
     hasBanner('a').should.be.false;
     hasBanner('a/*! Copyright whatever */').should.be.false;
   });

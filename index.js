@@ -9,9 +9,13 @@
 
 var bom = require('strip-bom');
 
-module.exports = function (str) {
+module.exports = function (str, arr) {
   if (typeof str !== 'string') {
     throw new Error('has-banner expects a string.');
   }
-  return bom(str).replace(/^\s+/, '').indexOf('/*') === 0;
+
+  str = bom(str).replace(/^\s+/, '');
+  var re = new RegExp(['global', 'jshint'].concat(arr || []).join('|'));
+
+  return str.indexOf('/*') === 0 && !re.test(str);
 };
