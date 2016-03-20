@@ -3,21 +3,12 @@
   "description": "Returns true if a file has a banner code comment. Used for linting.",
   "version": "0.2.0",
   "homepage": "https://github.com/jonschlinkert/has-banner",
-  "author": {
-    "name": "Jon Schlinkert",
-    "url": "https://github.com/jonschlinkert"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jonschlinkert/has-banner.git"
-  },
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/has-banner",
   "bugs": {
     "url": "https://github.com/jonschlinkert/has-banner/issues"
   },
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/jonschlinkert/has-banner/blob/master/LICENSE"
-  },
+  "license": "MIT",
   "files": [
     "index.js"
   ],
@@ -35,5 +26,9 @@
     "mocha": "*",
     "should": "*"
   },
-  "keywords": []
+  "verb": {
+    "related": {
+      "list": []
+    }
+  }
 }

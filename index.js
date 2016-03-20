@@ -9,7 +9,7 @@
 
 var bom = require('strip-bom');
 
-module.exports = function (str, arr) {
+module.exports = function(str, arr) {
   if (typeof str !== 'string') {
     throw new Error('has-banner expects a string.');
   }

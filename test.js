@@ -10,8 +10,8 @@
 var should = require('should');
 var hasBanner = require('./');
 
-describe('hasBanner', function () {
-  it('should return true if the string has a banner comment:', function () {
+describe('hasBanner', function() {
+  it('should return true if the string has a banner comment:', function() {
     hasBanner('/*').should.be.true;
     hasBanner('/*!').should.be.true;
     hasBanner('/**').should.be.true;
@@ -19,7 +19,7 @@ describe('hasBanner', function () {
     hasBanner('/*! Copyright whatever */').should.be.true;
   });
 
-  it('should return true when a banner has leading whitespace:', function () {
+  it('should return true when a banner has leading whitespace:', function() {
     hasBanner('      /*').should.be.true;
     hasBanner('      /*!').should.be.true;
     hasBanner('      /**').should.be.true;
@@ -27,7 +27,7 @@ describe('hasBanner', function () {
     hasBanner('      /*! Copyright whatever */').should.be.true;
   });
 
-  it('should return false if the string does not have a banner comment:', function () {
+  it('should return false if the string does not have a banner comment:', function() {
     hasBanner('/*!jshint').should.be.false;
     hasBanner('/*! jshint').should.be.false;
     hasBanner('/** jshint').should.be.false;
@@ -40,8 +40,8 @@ describe('hasBanner', function () {
     hasBanner('a/*! Copyright whatever */').should.be.false;
   });
 
-  it('should throw an error:', function () {
-    (function () {
+  it('should throw an error:', function() {
+    (function() {
       hasBanner();
     }).should.throw('has-banner expects a string.');
   });
