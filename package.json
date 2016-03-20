@@ -1,7 +1,7 @@
 {
   "name": "has-banner",
   "description": "Returns true if a file has a banner code comment. Used for linting.",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "homepage": "https://github.com/jonschlinkert/has-banner",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/has-banner",
@@ -20,8 +20,7 @@
     "test": "mocha"
   },
   "dependencies": {
-    "strip-bom-string": "^0.1.2",
-    "strip-use-strict": "^0.1.0"
+    "extract-banner": "^0.1.2"
   },
   "devDependencies": {
     "gulp-format-md": "^0.1.7",
